@@ -1,0 +1,147 @@
+/* ESTIMATE FORM */
+.estimate-section {
+  background: var(--green-dark);
+  padding: 100px 5%;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.estimate-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 80% at 50% 50%, rgba(74, 124, 89, 0.2) 0%, transparent 70%);
+}
+
+.estimate-section .section-label {
+  color: var(--terra-light);
+}
+
+.estimate-section .section-title {
+  color: white;
+  max-width: 700px;
+  margin: 0 auto 20px;
+  text-align: center;
+}
+
+.estimate-section p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 17px;
+  max-width: 480px;
+  margin: 0 auto 48px;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.estimate-form {
+  max-width: 560px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 40px;
+  text-align: left;
+  position: relative;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.form-input {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  padding: 12px 16px;
+  color: white;
+  font-size: 15px;
+  font-family: var(--font-body);
+  transition: border-color 0.2s;
+  width: 100%;
+}
+
+.form-input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--green-light);
+}
+
+.form-select {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  padding: 12px 16px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 15px;
+  font-family: var(--font-body);
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.form-select option {
+  background: #1a2e1a;
+  color: white;
+}
+
+.form-textarea {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  padding: 12px 16px;
+  color: white;
+  font-size: 15px;
+  font-family: var(--font-body);
+  width: 100%;
+  resize: vertical;
+  min-height: 100px;
+  margin-bottom: 20px;
+}
+
+.form-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--green-light);
+}
+
+.btn-submit {
+  width: 100%;
+  background: var(--terra);
+  color: white;
+  padding: 16px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  letter-spacing: 0.5px;
+  transition: background 0.2s;
+}
+
+.btn-submit:hover {
+  background: var(--terra-light);
+}

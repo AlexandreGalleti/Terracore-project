@@ -1,0 +1,35 @@
+/* ROOT VARIABLES & RESET */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --green-dark: #1a2e1a;
+  --green-mid: #2d4f2d;
+  --green-accent: #4a7c59;
+  --green-light: #7aad82;
+  --terra: #b85c38;
+  --terra-light: #d4855f;
+  --stone: #8c7b6b;
+  --cream: #f5f0ea;
+  --cream-dark: #e8e0d5;
+  --white: #ffffff;
+  --text-dark: #1c1c1c;
+  --text-mid: #4a4a4a;
+  --text-light: #7a7a7a;
+  --font-head: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  background: var(--white);
+  overflow-x: hidden;
+}
