@@ -30,16 +30,16 @@
   <!-- Fixed header with logo, phone contact, and CTA button -->
 <nav>
   <a href="#" class="nav-logo">
-    <div class="logo-mark">TC</div>
+    <img class="logo-mark" src="images/logo.png" alt="Terracore Logo">
     <div class="logo-text">
       <span class="logo-name">Terracore</span>
       <span class="logo-sub">Landscape & Hardscape</span>
     </div>
   </a>
   <div class="nav-right">
-    <a href="tel:+15551234567" class="nav-phone">
+    <a href="tel:+18633316004" class="nav-phone">
       <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.07 2.18 2 2 0 012.03 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-      (000) 000-0000
+      (863) 331-6004
     </a>
     <a href="#estimate" class="btn-primary">Get an Estimate</a>
   </div>
@@ -131,43 +131,43 @@
   </div>
   <div class="services-grid fade-up">
     <div class="service-card">
-      <div class="service-placeholder">🌿</div>
-      <!-- Replace placeholder div above with: <img class="service-img" src="landscaping-design.jpg" alt="Landscaping Design"> -->
+      <img class="service-img" src="images/landscaping-design.jpg" alt="Landscaping Design">
       <div class="service-body">
         <h3>Landscaping Design &amp; Renovation</h3>
         <p>Beautiful landscape design, plant installation, trimming, and bed upgrades to improve curb appeal and bring your yard to life.</p>
       </div>
     </div>
     <div class="service-card">
-      <div class="service-placeholder">💧</div>
+      <img class="service-img" src="images/Irrigation.jpeg" alt="Irrigation Services">
       <div class="service-body">
         <h3>Irrigation Services</h3>
         <p>Sprinkler repairs, new zones, leak fixes, and smart controllers to keep your lawn healthy with efficient watering.</p>
       </div>
     </div>
     <div class="service-card">
-      <div class="service-placeholder">🧱</div>
+      <img class="service-img" src="images/Pavers.jpeg" alt="Paver Installation">
       <div class="service-body">
         <h3>Paver Installation</h3>
         <p>Durable paver driveways, patios, and walkways built with proper excavation, grading, and compaction for long-lasting beauty.</p>
       </div>
     </div>
     <div class="service-card">
-      <div class="service-placeholder">🌱</div>
+      <img class="service-img" src="images/Sod.jpeg" alt="Sod Installation">
       <div class="service-body">
+      
         <h3>Sod Installation</h3>
         <p>We remove old grass, level the ground, and install fresh sod for an instant green lawn that looks healthy, clean, and uniform.</p>
       </div>
     </div>
     <div class="service-card">
-      <div class="service-placeholder">🏔️</div>
+      <img class="service-img" src="images/retaining-walls.jpg" alt="Retaining Walls">
       <div class="service-body">
         <h3>Retaining Walls</h3>
         <p>Strong, clean retaining walls that prevent erosion, add structure, and elevate your landscape with functional design.</p>
       </div>
     </div>
     <div class="service-card">
-      <div class="service-placeholder">🌊</div>
+      <img class="service-img" src="images/drainage-solutions.jpg" alt="Drainage Solutions">
       <div class="service-body">
         <h3>Drainage Solutions</h3>
         <p>French drains, catch basins, grading, and water-control systems that eliminate flooding and protect your property.</p>
@@ -399,11 +399,11 @@
       <div class="footer-contact">
         <a href="tel:+10000000000">
           <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.07 2.18 2 2 0 012.03 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-          (000) 000-0000
+          (863) 331-6004
         </a>
-        <a href="mailto:info@terracore.com">
+        <a href="mailto:Terracorelandscape@gmail.com">
           <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          info@terracore.com
+          Terracorelandscape@gmail.com
         </a>
       </div>
     </div>
@@ -435,28 +435,6 @@
   </div>
 </footer>
 
-<script>
-  /* ========================================
-     INTERSECTION OBSERVER - Fade-up animations
-     Animates sections as they scroll into view
-     ======================================== */
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-  /* ========================================
-     FORM SUBMISSION HANDLER
-     Shows confirmation message on submit
-     ======================================== */
-  document.querySelector('.btn-submit').addEventListener('click', function() {
-    this.textContent = '✓ Request Sent!';
-    this.style.background = '#2d4f2d';
-    setTimeout(() => {
-      this.textContent = 'Send My Request →';
-      this.style.background = '';
-    }, 3000);
-  });
-</script>
+<script src="script.js"></script>
 </body>
 </html>
