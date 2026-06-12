@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ | Terracore</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/service-page.css">
+  <style>
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+      margin-top: 40px;
+    }
+
+    .faq-item {
+      background: white;
+      border: 1px solid var(--cream-dark);
+      border-radius: 8px;
+      margin-bottom: 16px;
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+
+    .faq-item:hover {
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .faq-question {
+      padding: 24px;
+      background: white;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.3s;
+      font-family: var(--font-head);
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-dark);
+      user-select: none;
+    }
+
+    .faq-question:hover {
+      background: var(--cream);
+    }
+
+    .faq-toggle {
+      font-size: 24px;
+      color: var(--terra);
+      transition: transform 0.3s;
+      flex-shrink: 0;
+      margin-left: 16px;
+    }
+
+    .faq-item.active .faq-toggle {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      background: var(--cream);
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+    }
+
+    .faq-answer-content {
+      padding: 24px;
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--text-mid);
+    }
+
+    .faq-answer-content p {
+      margin-bottom: 12px;
+    }
+
+    .faq-answer-content ul {
+      list-style: none;
+      padding-left: 20px;
+    }
+
+    .faq-answer-content li {
+      padding: 6px 0;
+      position: relative;
+    }
+
+    .faq-answer-content li::before {
+      content: '•';
+      position: absolute;
+      left: -16px;
+      color: var(--terra);
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav>
+    <a href="terracore-website.html" class="nav-logo">
+      <img class="logo-mark" src="images/logo.png" alt="Terracore Logo">
+      <div class="logo-text">
+        <span class="logo-name">Terracore</span>
+        <span class="logo-sub">Landscape & Hardscape</span>
+      </div>
+    </a>
+    <div class="nav-menu">
+      <div class="nav-item dropdown">
+        <a href="terracore-website.html#services" class="nav-link">Services <span class="dropdown-icon">˅</span></a>
+        <div class="dropdown-menu">
+          <a href="landscaping-design.html" class="dropdown-item">Landscaping Design & Renovation</a>
+          <a href="irrigation-services.html" class="dropdown-item">Irrigation Services</a>
+          <a href="paver-installation.html" class="dropdown-item">Paver Installation</a>
+          <a href="sod-installation.html" class="dropdown-item">Sod Installation</a>
+          <a href="retaining-walls.html" class="dropdown-item">Retaining Walls</a>
+          <a href="drainage-solutions.html" class="dropdown-item">Drainage Solutions</a>
+        </div>
+      </div>
+      <a href="portfolio.html" class="nav-link">Portfolio</a>
+      <a href="faq.html" class="nav-link">FAQ</a>
+    </div>
+    <div class="nav-right">
+      <a href="tel:+18633316004" class="nav-phone">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.07 2.18 2 2 0 012.03 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        (863) 331-6004
+      </a>
+      <a href="#estimate" class="btn-primary">Get an Estimate</a>
+    </div>
+  </nav>
+
+  <!-- ==================== FAQ HERO ==================== -->
+  <section class="service-hero" style="background: linear-gradient(135deg, rgba(26, 46, 26, 0.7), rgba(45, 79, 45, 0.7)), url('images/faq-bg.jpg') center/cover no-repeat; background-attachment: fixed;">
+    <h1>Frequently Asked Questions</h1>
+    <p>Find answers to common questions about our landscaping and hardscape services.</p>
+    <div class="service-hero-cta">
+      <a href="#estimate" class="cta-button cta-primary">Get Your Free Quote</a>
+      <a href="tel:+18633316004" class="cta-button cta-secondary">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.07 2.18 2 2 0 012.03 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        (863) 331-6004
+      </a>
+    </div>
+  </section>
+
+  <!-- ==================== FAQ SECTION ==================== -->
+  <section class="service-content">
+    <div class="service-content-wrapper">
+      <div class="faq-container">
+        <div class="faq-item active">
+          <div class="faq-question">
+            <span>How much does landscaping design cost?</span>
+            <span class="faq-toggle">▼</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>The cost of landscaping design depends on the size of your property, complexity of the design, and materials used. We offer free consultations to assess your project and provide accurate quotes. Contact us today to schedule yours.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>When is the best time to install sod?</span>
+            <span class="faq-toggle">▼</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>Sod can be installed most times of year, but spring and fall offer the best results. These seasons provide cooler temperatures and adequate moisture for establishment. Summer installations require extra watering, while winter is generally not recommended in most climates.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Do you offer maintenance services?</span>
+            <span class="faq-toggle">▼</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>Yes! We offer comprehensive maintenance services including:</p>
+              <ul>
+                <li>Regular lawn care and mowing</li>
+                <li>Landscape maintenance and trimming</li>
+                <li>Irrigation system maintenance and repairs</li>
+                <li>Seasonal clean-up and preparation</li>
+              </ul>
+              <p>Contact us to learn about our maintenance packages.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How long do retaining walls last?</span>
+            <span class="faq-toggle">▼</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>A properly built retaining wall can last 30-50+ years depending on materials and maintenance. Stone and concrete walls tend to last longer than timber. Our walls are built with proper drainage and engineering to maximize longevity.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What's included in your drainage services?</span>
+            <span class="faq-toggle">▼</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>Our drainage services include:</p>
+              <ul>
+                <li>Property assessment and water flow analysis</li>
+                <li>French drain installation</li>
+                <li>Catch basins and inlet installation</li>
+                <li>Grading and slope correction</li>
+                <li>Outlet placement and landscaping</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Do you provide design consultations?</span>
+            <span class="faq-toggle">▼</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>Absolutely! We offer free initial consultations to discuss your project, answer questions, and provide preliminary ideas. During this consultation, we'll assess your property and discuss your vision to provide an accurate quote.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What's your service area?</span>
+            <span class="faq-toggle">▼</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>We service the greater central Florida area including residential and commercial properties. Contact us to confirm service availability for your specific location. We're happy to discuss custom projects outside our typical service area.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Do you offer payment plans?</span>
+            <span class="faq-toggle">▼</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>Yes, we work with customers on flexible payment arrangements for larger projects. During your consultation, we can discuss payment options that work best for your budget. Contact us to learn more about our financing options.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA ==================== -->
+  <section class="service-cta">
+    <h2>Have More Questions?</h2>
+    <p>Contact our team directly for personalized assistance with your landscaping project.</p>
+    <div class="service-cta-buttons">
+      <a href="#estimate" class="cta-button cta-primary">Get Your Free Quote</a>
+      <a href="tel:+18633316004" class="cta-button cta-secondary">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.07 2.18 2 2 0 012.03 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        (863) 331-6004
+      </a>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer></footer>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const faqItem = question.parentElement;
+        faqItem.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>

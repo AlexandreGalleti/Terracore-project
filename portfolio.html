@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Terracore</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/service-page.css">
+  <style>
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .portfolio-item {
+      border-radius: 8px;
+      overflow: hidden;
+      background: white;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .portfolio-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    }
+
+    .portfolio-image {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .portfolio-info {
+      padding: 24px;
+    }
+
+    .portfolio-info h3 {
+      font-family: var(--font-head);
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+
+    .portfolio-info p {
+      font-size: 14px;
+      color: var(--text-mid);
+      line-height: 1.6;
+    }
+
+    .portfolio-tag {
+      display: inline-block;
+      background: var(--cream);
+      color: var(--terra);
+      padding: 4px 12px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-top: 12px;
+    }
+
+    .portfolio-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 40px;
+      align-items: center;
+    }
+
+    .filter-btn {
+      padding: 10px 20px;
+      border: 1px solid var(--cream-dark);
+      background: white;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-dark);
+      transition: all 0.3s;
+    }
+
+    .filter-btn:hover {
+      background: var(--cream);
+      border-color: var(--terra);
+    }
+
+    .filter-btn.active {
+      background: var(--terra);
+      color: white;
+      border-color: var(--terra);
+    }
+
+    .portfolio-item.hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav>
+    <a href="terracore-website.html" class="nav-logo">
+      <img class="logo-mark" src="images/logo.png" alt="Terracore Logo">
+      <div class="logo-text">
+        <span class="logo-name">Terracore</span>
+        <span class="logo-sub">Landscape & Hardscape</span>
+      </div>
+    </a>
+    <div class="nav-menu">
+      <div class="nav-item dropdown">
+        <a href="terracore-website.html#services" class="nav-link">Services <span class="dropdown-icon">˅</span></a>
+        <div class="dropdown-menu">
+          <a href="landscaping-design.html" class="dropdown-item">Landscaping Design & Renovation</a>
+          <a href="irrigation-services.html" class="dropdown-item">Irrigation Services</a>
+          <a href="paver-installation.html" class="dropdown-item">Paver Installation</a>
+          <a href="sod-installation.html" class="dropdown-item">Sod Installation</a>
+          <a href="retaining-walls.html" class="dropdown-item">Retaining Walls</a>
+          <a href="drainage-solutions.html" class="dropdown-item">Drainage Solutions</a>
+        </div>
+      </div>
+      <a href="portfolio.html" class="nav-link">Portfolio</a>
+      <a href="faq.html" class="nav-link">FAQ</a>
+    </div>
+    <div class="nav-right">
+      <a href="tel:+18633316004" class="nav-phone">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.07 2.18 2 2 0 012.03 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        (863) 331-6004
+      </a>
+      <a href="#estimate" class="btn-primary">Get an Estimate</a>
+    </div>
+  </nav>
+
+  <!-- ==================== PORTFOLIO HERO ==================== -->
+  <section class="service-hero" style="background: linear-gradient(135deg, rgba(26, 46, 26, 0.7), rgba(45, 79, 45, 0.7)), url('images/portfolio-bg.jpg') center/cover no-repeat; background-attachment: fixed;">
+    <h1>Our Portfolio</h1>
+    <p>Explore our latest landscaping and hardscape projects. See what we can do for your property.</p>
+    <div class="service-hero-cta">
+      <a href="#estimate" class="cta-button cta-primary">Get Your Free Quote</a>
+      <a href="tel:+18633316004" class="cta-button cta-secondary">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.07 2.18 2 2 0 012.03 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        (863) 331-6004
+      </a>
+    </div>
+  </section>
+
+  <!-- ==================== PORTFOLIO FILTERS ==================== -->
+  <section class="service-content">
+    <div class="service-content-wrapper">
+      <div class="portfolio-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="landscaping">Landscaping</button>
+        <button class="filter-btn" data-filter="hardscape">Hardscape</button>
+        <button class="filter-btn" data-filter="irrigation">Irrigation</button>
+        <button class="filter-btn" data-filter="drainage">Drainage</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PORTFOLIO GRID ==================== -->
+  <section class="service-content">
+    <div class="service-content-wrapper">
+      <div class="portfolio-grid">
+        <div class="portfolio-item" data-category="landscaping">
+          <img src="images/landscaping-design.jpg" alt="Modern Landscape Design" class="portfolio-image">
+          <div class="portfolio-info">
+            <h3>Modern Landscape Design</h3>
+            <p>Contemporary landscape with new plantings, mulch beds, and hardscape features for a high-end residential property.</p>
+            <span class="portfolio-tag">Landscaping</span>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="hardscape">
+          <img src="images/paver-installation.jpg" alt="Paver Patio Installation" class="portfolio-image">
+          <div class="portfolio-info">
+            <h3>Paver Patio Installation</h3>
+            <p>Beautiful permeable paver patio with proper grading and base preparation for outdoor entertainment.</p>
+            <span class="portfolio-tag">Hardscape</span>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="irrigation">
+          <img src="images/Irrigation.jpeg" alt="Irrigation System Install" class="portfolio-image">
+          <div class="portfolio-info">
+            <h3>Smart Irrigation System</h3>
+            <p>Complete irrigation system with smart controllers for efficient watering and easy maintenance.</p>
+            <span class="portfolio-tag">Irrigation</span>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="hardscape">
+          <img src="images/retaining-walls.jpg" alt="Retaining Wall Project" class="portfolio-image">
+          <div class="portfolio-info">
+            <h3>Retaining Wall Installation</h3>
+            <p>Structural retaining wall with proper drainage and integrated landscaping for erosion control.</p>
+            <span class="portfolio-tag">Hardscape</span>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="landscaping">
+          <img src="images/sod-installation.jpg" alt="Instant Lawn Installation" class="portfolio-image">
+          <div class="portfolio-info">
+            <h3>Instant Green Lawn</h3>
+            <p>Complete sod installation with soil preparation and immediate green results for residential property.</p>
+            <span class="portfolio-tag">Landscaping</span>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="drainage">
+          <img src="images/drainage-solutions.jpg" alt="Drainage System" class="portfolio-image">
+          <div class="portfolio-info">
+            <h3>Comprehensive Drainage System</h3>
+            <p>French drain installation with proper grading to eliminate flooding and protect the foundation.</p>
+            <span class="portfolio-tag">Drainage</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA ==================== -->
+  <section class="service-cta">
+    <h2>Ready to Transform Your Outdoor Space?</h2>
+    <p>Let our team create a beautiful landscape or hardscape project for your property.</p>
+    <div class="service-cta-buttons">
+      <a href="#estimate" class="cta-button cta-primary">Get Your Free Quote</a>
+      <a href="tel:+18633316004" class="cta-button cta-secondary">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.07 2.18 2 2 0 012.03 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        (863) 331-6004
+      </a>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer></footer>
+
+  <script>
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Remove active de todos
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        // Adiciona active ao clicado
+        btn.classList.add('active');
+        
+        // Filtra os items
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.portfolio-item').forEach(item => {
+          if (filter === 'all' || item.dataset.category === filter) {
+            item.classList.remove('hidden');
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
