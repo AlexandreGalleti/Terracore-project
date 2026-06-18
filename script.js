@@ -19,3 +19,24 @@ document.querySelector('.btn-submit').addEventListener('click', function() {
     this.style.background = '';
   }, 3000);
 });
+
+/* ========================================
+   HAMBURGER MENU
+   ======================================== */
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.querySelector('.nav-menu');
+
+if (hamburger && navMenu) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navMenu.classList.toggle('open');
+  });
+
+  // Fecha o menu ao clicar em um link
+  navMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      navMenu.classList.remove('open');
+    });
+  });
+}

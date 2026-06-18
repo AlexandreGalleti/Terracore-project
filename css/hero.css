@@ -111,3 +111,56 @@
   opacity: 0.20;
   mix-blend-mode: luminosity;
 }
+/* ========================
+   MOBILE HERO
+   ======================== */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100svh;
+    padding: 100px 5% 60px;
+    background-attachment: scroll;
+    overflow-x: hidden;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    font-size: clamp(36px, 10vw, 52px);
+    letter-spacing: -0.5px;
+  }
+
+  .hero p {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .hero-stats {
+    gap: 24px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+  }
+
+  .hero-stat-num {
+    font-size: 28px;
+  }
+
+  .hero-bg-img {
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+
+  .hero-bg-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
