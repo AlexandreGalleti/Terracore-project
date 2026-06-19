@@ -25,6 +25,8 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
@@ -32,4 +34,6 @@ body {
   color: var(--text-dark);
   background: var(--white);
   overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
 }

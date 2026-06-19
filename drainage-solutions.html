@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/nav.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/service-page.css">
+  <link rel="stylesheet" href="css/mobile.css">
 </head>
 <body>
   <!-- ==================== NAVIGATION ==================== -->
@@ -40,6 +41,7 @@
         (863) 331-6004
       </a>
       <a href="#estimate" class="cta-button cta-primary">Get an Estimate</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </nav>
 
@@ -131,5 +133,20 @@
 
   <!-- ==================== FOOTER ==================== -->
   <footer></footer>
+  <script>
+    var hb = document.getElementById("hamburger");
+    var nm = document.querySelector(".nav-menu");
+    if (hb && nm) {
+      hb.addEventListener("click", function() {
+        hb.classList.toggle("open");
+        nm.classList.toggle("open");
+      });
+      nm.querySelectorAll("a").forEach(function(a) {
+        a.addEventListener("click", function() {
+          hb.classList.remove("open");
+          nm.classList.remove("open");
+        });
+      });
+    }
+  </script>
 </body>
-</html>

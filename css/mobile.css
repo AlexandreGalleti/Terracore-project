@@ -1,0 +1,201 @@
+/* ================================================
+   TERRACORE — MOBILE RESPONSIVE (iPhone 17 / 393px)
+   ================================================ */
+
+@media (max-width: 768px) {
+
+  /* === GLOBAL === */
+  .section {
+    padding: 56px 5%;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  /* === SERVICE HERO === */
+  .service-hero {
+    padding: 100px 5% 64px;
+    min-height: auto;
+    background-attachment: scroll !important;
+    text-align: center;
+    margin-top: 64px;
+  }
+
+  .service-hero h1 {
+    font-size: clamp(28px, 8vw, 40px);
+    letter-spacing: 0;
+  }
+
+  .service-hero p {
+    font-size: 15px;
+    margin: 0 auto 28px;
+  }
+
+  .service-hero-cta {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .cta-button {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+    padding: 14px 20px;
+  }
+
+  /* === CONTENT GRID (2 col → 1 col) === */
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-bottom: 48px;
+    direction: ltr !important;
+  }
+
+  .content-grid > * {
+    direction: ltr !important;
+  }
+
+  .content-image {
+    height: 240px;
+    order: -1;
+  }
+
+  .content-text h2 {
+    font-size: 24px;
+  }
+
+  /* === WHY CHOOSE GRID (3 col → 1 col) === */
+  .why-choose-section {
+    padding: 48px 5%;
+  }
+
+  .why-choose-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .why-item-card {
+    padding: 24px;
+    text-align: left;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .why-item-icon {
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  /* === SERVICE CTA === */
+  .service-cta {
+    padding: 56px 5%;
+  }
+
+  .service-cta h2 {
+    font-size: 26px;
+  }
+
+  .service-cta p {
+    font-size: 15px;
+  }
+
+  .service-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .service-cta-buttons .cta-button {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+
+  /* === PORTFOLIO GRID === */
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .portfolio-image {
+    height: 200px;
+  }
+
+  .portfolio-filters {
+    gap: 8px;
+  }
+
+  .filter-btn {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  /* === FAQ === */
+  .faq-container {
+    margin-top: 24px;
+  }
+
+  .faq-question {
+    padding: 18px;
+    font-size: 15px;
+  }
+
+  .faq-answer-content {
+    padding: 16px 18px;
+    font-size: 14px;
+  }
+
+  /* === FOOTER === */
+  footer {
+    padding: 48px 5% 28px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+
+  /* === ABOUT === */
+  .about-section {
+    padding: 56px 5%;
+    gap: 40px;
+  }
+
+  .about-badge {
+    right: 0;
+    bottom: -16px;
+  }
+
+  .about-content {
+    padding-left: 0;
+  }
+
+  /* === AREAS GRID === */
+  .areas-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .areas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-filters {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filter-btn {
+    width: 100%;
+  }
+}
