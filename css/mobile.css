@@ -199,3 +199,88 @@
     width: 100%;
   }
 }
+
+/* === FIX: INDEX.HTML WHY-GRID (2 col → 1 col) === */
+@media (max-width: 768px) {
+  .why-grid {
+    grid-template-columns: 1fr !important;
+    margin-top: 32px;
+  }
+
+  .why-item {
+    padding: 28px 20px;
+    border: 1px solid var(--cream-dark) !important;
+    border-top: none !important;
+  }
+
+  .why-item:first-child {
+    border-top: 1px solid var(--cream-dark) !important;
+  }
+
+  .why-item:nth-child(2),
+  .why-item:nth-child(3),
+  .why-item:nth-child(4) {
+    border-left: 1px solid var(--cream-dark) !important;
+    border-top: none !important;
+  }
+
+  .why-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 16px;
+  }
+
+  .why-item h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .why-item p {
+    font-size: 14px;
+  }
+
+  /* === FIX: ABOUT SECTION === */
+  .about-section {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+    padding: 56px 5% !important;
+  }
+
+  .about-badge {
+    right: 0 !important;
+    bottom: 0 !important;
+  }
+
+  .about-content {
+    padding-left: 0 !important;
+  }
+
+  .about-main-img,
+  .about-img-placeholder {
+    aspect-ratio: 16/9;
+  }
+
+  /* === FIX: TESTIMONIALS === */
+  .testimonials-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* === FIX: FORM ROW === */
+  .form-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* === FIX: SECTION TITLE MAX-WIDTH === */
+  .section-title {
+    max-width: 100% !important;
+    font-size: clamp(24px, 7vw, 36px) !important;
+  }
+
+  /* === FIX: CTA BAND === */
+  .cta-band {
+    flex-direction: column !important;
+    text-align: center;
+    gap: 20px;
+    padding: 48px 5% !important;
+  }
+}
